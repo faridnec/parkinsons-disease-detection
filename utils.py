@@ -1,16 +1,8 @@
 import csv
 import numpy as np
 
-
 OUTPUT_INDEX = 17
 PARKINSON_CSV = './data/PARKINSONS.csv'
-
-# def load_data():
-#     data = np.loadtxt(PARKINSON_CSV, delimiter=',', skiprows=1)
-#     #separate the input variable from output
-#     X = data[:,:OUTPUT_INDEX] + data[:,OUTPUT_INDEX+1:]
-#     y = data[:,OUTPUT_INDEX]
-#     return X, y
 
 def parse_data():
     X = []
@@ -27,6 +19,7 @@ def parse_data():
         
         for row in reader:
             # Extract input variables from the row (exclude the output variable)
+            #skip the name column as we begin at index 1
             input_data = [float(value) for value in row[1:OUTPUT_INDEX] + row[OUTPUT_INDEX+1:]]
             output_data = int(row[OUTPUT_INDEX])
             

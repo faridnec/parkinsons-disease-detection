@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 OUTPUT_INDEX = 17
 PARKINSON_CSV = './data/PARKINSONS.csv'
 
-def parse_data():
+def load_data():
     X = []
     y = []
     

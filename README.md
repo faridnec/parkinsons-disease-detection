@@ -1,5 +1,5 @@
-# Logistic Regression in the Diagnosis of Parkinson's Disease / Parkinson Hastalığının Tanısında Regresyon Kullanımı (tr)
-In this notebook we will implement multiple regression to diagnose parkinson disease, the dataset is obtained from Oxford Parkinson's Disease Detection Dataset (https://archive.ics.uci.edu/dataset/174/parkinsons)
+# Logistic Regression in the Diagnosis of Parkinson's Disease / Parkinson Hastalığı Tanısında Lojistik Regresyon (tr)
+In this notebook we will implement logistic regression to diagnose parkinson disease, the dataset is obtained from Oxford Parkinson's Disease Detection Dataset (https://archive.ics.uci.edu/dataset/174/parkinsons)
 
 ## Dataset
 ### Information

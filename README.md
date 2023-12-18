@@ -19,13 +19,11 @@ The data analysis phase aims to provide an understanding of the dataset, highlig
 
 Correlation Analysis:
 - Exploring the correlation between each feature and the target variable (status) and identifying features that exhibit a strong correlation, as these may play a significant role in the diagnostic process.
-
 ![DataCorr](https://github.com/faridnec/parkinson-regression/blob/main/img/corr.png?raw=true)
 
 Distribution Analysis:
 - Examining the distribution of target variable values (1 and 0) to understand the prevalence of Parkinson's disease in the dataset and identifying potential class imbalances that may impact model training and evaluation.
-
-![Dist]()
+![Dist](https://github.com/faridnec/parkinson-regression/blob/main/img/countplot.png?raw=true)
 
 ## Logistic Regression
 

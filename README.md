@@ -10,9 +10,23 @@ In this notebook we will implement logistic regression to diagnose parkinson dis
 - Here is a brief of the dataset, peeking it using pandas
 ![Dataset](https://github.com/faridnec/parkinson-regression/blob/main/img/dataset.png?raw=true)
 
+Additional Variable Information
+- Matrix column entries (attributes):
+- name - ASCII subject name and recording number
+- MDVP:Fo(Hz) - Average vocal fundamental frequency
+- MDVP:Fhi(Hz) - Maximum vocal fundamental frequency
+- MDVP:Flo(Hz) - Minimum vocal fundamental frequency
+- MDVP:Jitter(%),MDVP:Jitter(Abs),MDVP:RAP,MDVP:PPQ,Jitter:DDP - Several measures of variation in fundamental frequency
+- MDVP:Shimmer,MDVP:Shimmer(dB),Shimmer:APQ3,Shimmer:APQ5,MDVP:APQ,Shimmer:DDA - Several measures of variation in amplitude
+- NHR,HNR - Two measures of ratio of noise to tonal components in the voice
+- status - Health status of the subject (one) - Parkinson's, (zero) - healthy
+- RPDE,D2 - Two nonlinear dynamical complexity measures
+- DFA - Signal fractal scaling exponent
+- spread1,spread2,PPE - Three nonlinear measures of fundamental frequency variation
+
 Reference:
 
-Max A. Little, Patrick E. McSharry, Eric J. Hunter, Lorraine O. Ramig (2008), 'Suitability of dysphonia measurements for telemonitoring of Parkinson's disease', IEEE Transactions on Biomedical Engineering
+Little,Max. (2008). Parkinsons. UCI Machine Learning Repository. https://doi.org/10.24432/C59C74.
 
 ## Data Analyzation
 The data analysis phase aims to provide an understanding of the dataset, highlighting key relationships, distributions, and feature types. This knowledge will guide preprocessing steps and contribute to the development of an effective logistic regression model for diagnosing Parkinson's disease.
@@ -22,12 +36,16 @@ Correlation Analysis:
 ![DataCorr](https://github.com/faridnec/parkinson-regression/blob/main/img/corr.png?raw=true)
 
 Distribution Analysis:
-- Examining the distribution of target variable values (1 and 0) to understand the prevalence of Parkinson's disease in the dataset and identifying potential class imbalances that may impact model training and evaluation.
+- Examining the distribution of target variable values (1 and 0) to understand the prevalence of Parkinson's disease in the dataset and identifying potential class imbalances that may impact model training and evaluation. 
 ![Dist](https://github.com/faridnec/parkinson-regression/blob/main/img/countplot.png?raw=true)
 
 ## Logistic Regression
 
 Logistic Regression (also known as logit model) is often used for classification and predictive analytics. Logistic regression estimates the probability of an event occurring. Since the outcome is a probability, the dependent variable is bounded between 0 and 1 which aligns with the case we are dealing with here.
+
+Reference:
+
+IBM. (n.d.). Logistic Regression. https://www.ibm.com/topics/logistic-regression
 
 ### Sigmoid Function
 Logistic regression model is represented as
@@ -131,3 +149,20 @@ def compute_gradient(X, y, w, b, *argv):
         
     return dj_db, dj_dw
 ```
+## Output
+The output gained from Logistic Regression using pure python is
+```markdown
+Train Accuracy: 76.410256
+```
+compared to:
+Using `scikit-learn` library
+- Scikit Logistic Regression
+```markdown
+Accuracy: 89.74358974358975
+```
+- Scikit MLP Classifier Neural Network
+```markdown
+Accuracy with Neural Network: 94.87179487179486
+```
+## Conclusion
+To reach the optimum accuracy and precision, it is good to tweak some parameter such feature engineering, preprocessing, hyperparameter tuning. Contribution is always welcome!

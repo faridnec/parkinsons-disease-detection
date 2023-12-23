@@ -149,6 +149,7 @@ def compute_gradient(X, y, w, b, *argv):
         
     return dj_db, dj_dw
 ```
+<<<<<<< HEAD
 ## Output
 The output gained from Logistic Regression using pure python is
 ```markdown
@@ -166,3 +167,6 @@ Accuracy with Neural Network: 94.87179487179486
 ```
 ## Conclusion
 To reach the optimum accuracy and precision, it is good to tweak some parameter such feature engineering, preprocessing, hyperparameter tuning. Contribution is always welcome!
+=======
+---------------------------------------------------------------
+>>>>>>> e93ff34c5b047e7ad3610ba452d55e4c04594550

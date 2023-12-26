@@ -2,7 +2,7 @@
 # Logistic Regression in the Diagnosis of Parkinson's Disease
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/faridnec/parkinsons-disease-detection/blob/main/logistic_reg.ipynb)
 
-> View these instructions in [Turkish](/translations/tr/README.md)
+> View these instructions in [Turkish](./translation/tr/README.md)
 
 In this notebook we will implement logistic regression to diagnose parkinson disease, the dataset is obtained from Oxford Parkinson's Disease Detection Dataset (https://archive.ics.uci.edu/dataset/174/parkinsons)
 

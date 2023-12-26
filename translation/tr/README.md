@@ -49,7 +49,7 @@ Referans:
 IBM. (tarih yok). Lojistik regresyon. https://www.ibm.com/topics/logistic-regression
 
 ### Sigmoid Fonksiyonu
-![Logistic Function](./img/logistic-func.png)
+![Logistic Function](https://github.com/faridnec/parkinsons-disease-detection/blob/main/img/logistic-func.png)
 > Sigmoid/Logistic function
 
 Lojistik regresyon modeli şu şekilde temsil edilir:
@@ -72,14 +72,13 @@ def sigmoid(z):
 ```
 
 ### Maliyet fonksiyonu
-![Logistic Cost Function](./img/lr-cost-function.png)
+![Logistic Cost Function](https://github.com/faridnec/parkinsons-disease-detection/blob/main/img/lr-cost-function.png)
 > Logistic Cost Function
 
 Lojistik regresyon maliyet fonksiyonu şu şekildedir:
 
 $$ J(\mathbf{w},b) = \frac{1}{m}\sum_{i=0}^{m-1} \left[ loss(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), y^{(i)}) \right] \tag{1}$$
 
-Neresi
 * m veri kümesindeki eğitim örneklerinin sayısıdır
 
 
@@ -113,14 +112,14 @@ def compute_cost(X, y, w, b, *argv):
 ```
 ### Dereceli Azalma (Gradient Descent)
 Dereceli Azalma algoritması:
-![Gradient Descent](./img/GDescent.png)
+![Gradient Descent](https://github.com/faridnec/parkinsons-disease-detection/blob/main/img/GDescent.png)
 > Gradient Descent
 
-$$\begin{hizalama*}& \text{yakınsamaya kadar tekrarla:} \; \lbrace \yenisatır \; & b := b - \alpha \frac{\partial J(\mathbf{w},b)}{\partial b} \newline \; & w_j := w_j - \alpha \frac{\partial J(\mathbf{w},b)}{\partial w_j} \tag{1} \; & \text{j için := 0..n-1}\newline & \rbrace\end{align*}$$
+$$\begin{align*}& \text{yakınsamaya kadar tekrarla:} \; \lbrace \newline \; & b := b - \alpha \frac{\partial J(\mathbf{w},b)}{\partial b} \newline \; & w_j := w_j - \alpha \frac{\partial J(\mathbf{w},b)}{\partial w_j} \tag{1} \; & \text{j için := 0..n-1}\newline & \rbrace\end{align*}$$
 
 burada, $b$, $w_j$ parametrelerinin tümü aynı anda güncellenir
 
-Bu `compute_gradient` işlevi $\frac{\partial J(\mathbf{w},b)}{\partial w}$, $\frac{\partial J(\mathbf{w},b)}{\partial b}$ aşağıdaki denklemler (2) ve (3) saymak için kullanılır.
+Bu `compute_gradient` işlevi $\frac{\partial J(\mathbf{w},b)}{\partial w}$, $\frac{\partial J(\mathbf{w},b)}{\partial b}$ aşağıdaki denklemler (2) ve (3) çözmek için kullanılır.
 
 $$
 \frac{\partial J(\mathbf{w},b)}{\partial b} = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf {w},b}(\mathbf{x}^{(i)}) - \mathbf{y}^{(i)}) \tag{2}

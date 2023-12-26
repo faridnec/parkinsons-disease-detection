@@ -111,9 +111,10 @@ def compute_cost(X, y, w, b, *argv):
     return total_cost
 ```
 ### Dereceli Azalma (Gradient Descent)
-Dereceli Azalma algoritması:
 ![Gradient Descent](https://github.com/faridnec/parkinsons-disease-detection/blob/main/img/GDescent.png)
 > Gradient Descent
+
+Dereceli Azalma algoritması:
 
 $$\begin{align*}& \text{yakınsamaya kadar tekrarla:} \; \lbrace \newline \; & b := b - \alpha \frac{\partial J(\mathbf{w},b)}{\partial b} \newline \; & w_j := w_j - \alpha \frac{\partial J(\mathbf{w},b)}{\partial w_j} \tag{1} \; & \text{j için := 0..n-1}\newline & \rbrace\end{align*}$$
 
@@ -161,7 +162,7 @@ def compute_gradient(X, y, w, b, *argv):
 ## Çıktılar
 Python kullanılarak Lojistik Regresyondan elde edilen çıktı
 ```markdown
-Tren Doğruluğu: 76.410256
+Accuracy: 76.410256
 ```
 karşılaştırma yaparak:
 - Scikit Logistic Regression

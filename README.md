@@ -1,5 +1,9 @@
 
-# Logistic Regression in the Diagnosis of Parkinson's Disease / Parkinson Hastalığı Tanısında Lojistik Regresyon (tr)
+# Logistic Regression in the Diagnosis of Parkinson's Disease
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/faridnec/parkinsons-disease-detection/blob/main/logistic_reg.ipynb)
+
+> View these instructions in [Turkish](/translations/tr/README.md)
+
 In this notebook we will implement logistic regression to diagnose parkinson disease, the dataset is obtained from Oxford Parkinson's Disease Detection Dataset (https://archive.ics.uci.edu/dataset/174/parkinsons)
 
 ## Dataset
@@ -48,6 +52,9 @@ Reference:
 IBM. (n.d.). Logistic Regression. https://www.ibm.com/topics/logistic-regression
 
 ### Sigmoid Function
+![Logistic Function](./img/logistic-func.png)
+> Sigmoid/Logistic function
+
 Logistic regression model is represented as
 
 $$ f_{\mathbf{w},b}(x) = g(\mathbf{w}\cdot \mathbf{x} + b)$$
@@ -68,6 +75,9 @@ def sigmoid(z):
     return g
 ```
 ### Cost Function
+![Logistic Cost Function](./img/lr-cost-function.png)
+> Logistic Cost Function
+
 Logistic regression cost function is of the form 
 
 $$ J(\mathbf{w},b) = \frac{1}{m}\sum_{i=0}^{m-1} \left[ loss(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), y^{(i)}) \right] \tag{1}$$
@@ -105,6 +115,9 @@ def compute_cost(X, y, w, b, *argv):
     return total_cost
 ```
 ### Gradient Descent
+![Gradient Descent](./img/GDescent.png)
+> Gradient Descent
+
 Gradient descent algorithm is:
 
 $$\begin{align*}& \text{repeat until convergence:} \; \lbrace \newline \; & b := b -  \alpha \frac{\partial J(\mathbf{w},b)}{\partial b} \newline       \; & w_j := w_j -  \alpha \frac{\partial J(\mathbf{w},b)}{\partial w_j} \tag{1}  \; & \text{for j := 0..n-1}\newline & \rbrace\end{align*}$$
@@ -149,7 +162,6 @@ def compute_gradient(X, y, w, b, *argv):
         
     return dj_db, dj_dw
 ```
-<<<<<<< HEAD
 ## Output
 The output gained from Logistic Regression using pure python is
 ```markdown
@@ -167,6 +179,3 @@ Accuracy with Neural Network: 94.87179487179486
 ```
 ## Conclusion
 To reach the optimum accuracy and precision, it is good to tweak some parameter such feature engineering, preprocessing, hyperparameter tuning. Contribution is always welcome!
-=======
----------------------------------------------------------------
->>>>>>> e93ff34c5b047e7ad3610ba452d55e4c04594550
